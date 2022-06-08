@@ -58,9 +58,7 @@ void print_to_98(int n)
 			{
 
 
-
 				printf(",");
-
 
 
 			}
@@ -84,8 +82,6 @@ void print_to_98(int n)
 
 	}
 
-
 	printf("\n");
-
 
 }
