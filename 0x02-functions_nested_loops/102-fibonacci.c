@@ -11,9 +11,7 @@ int main(void)
 
 {
 
-
 	int count;
-
 	unsigned long fib1 = 0, fib2 = 1, sum;
 
 
@@ -21,20 +19,15 @@ int main(void)
 
 	{
 
-
 		sum = fib1 + fib2;
-
 		printf("%lu", sum);
 
 
 		fib1 = fib2;
-
 		fib2 = sum;
 
 
-
 		if (count == 49)
-
 			printf("\n");
 
 		else
@@ -42,7 +35,6 @@ int main(void)
 			printf(",");
 
 	}
-
 
 
 
