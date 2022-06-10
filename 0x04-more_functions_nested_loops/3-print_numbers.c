@@ -1,18 +1,20 @@
 #iclude "main.h"
 
 /**
- * print_numbers - prints 0123456789\n
- *
- * Return: void
+ * print_numbers - prints numbers
+ * Return: Always 0.
  */
 void print_numbers(void)
 {
-	char c;
+	int i;
 
-	for (c = '0'; c <= '9'; c++)
+	i = 0;
+	while (i < 10)
 	{
-		_putchar(c);
+		_putchar(i + '0');
+		i++;
 	}
+
 	_putchar('\n');
 }
 	
