@@ -7,6 +7,7 @@
  * Return: Always 0.
  */
 
+
 int sqrt_a(int a, int b)
 {
 	if (b * b == a)
