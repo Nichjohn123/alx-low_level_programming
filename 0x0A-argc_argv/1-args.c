@@ -1,4 +1,3 @@
-#include "main.h"
 #include <stdio.h>
 
 /**
@@ -8,15 +7,8 @@
  *
  * Return: Nothing.
  */
-int main(int argc, char *argv[])
+int main(int argc, char *argv[] __attribute__((unused)))
 {
-	int count;
-
-	(void)argv;
-	for (count = 0; count < argc; count++)
-	{
-		if (count + 1 == argc)
-			printf("%i\n", count);
-	}
+	printf("%d\n", argc - 1);
 	return (0);
 }
