@@ -1,29 +1,46 @@
 #include "main.h"
+#include <stdio.h>
 #include <stdlib.h>
+
 /**
- * _calloc - allocates memory for any array.
- * @nmemb: number of elements.
- * @size: size of bytes
+ * _memset - prints buffer in hexa
+ * @s: buffer
+ * @b: write
+ * @n: size
+ * Return: Nothing.
+ */
+char *_memset(char *s, char b, unsigned int n)
+{
+	unsigned int i;
+
+	for (i = 0; i < n; i++)
+	{
+		*(s + i) = b;
+	}
+	return (s);
+}
+/**
+ * _calloc - function that concatenates two strings
+ * @nmemb: strings s1.
+ * @size: string s2.
  *
- * Return: pointer to the allocated memory.
- * if nmemb or size is 0, return NULL.
- * if malloc fails, returns NULL.
+ * Return: Always 0.
  */
 void *_calloc(unsigned int nmemb, unsigned int size)
 {
-	char *p;
-	unsigned int i;
+	void *str;
 
 	if (nmemb == 0 || size == 0)
+	{
 		return (NULL);
+	}
 
-	p = malloc(nmemb * size);
-
-	if (p == NULL)
+	str = malloc(nmemb * size);
+	if (str == NULL)
+	{
 		return (NULL);
+	}
+	_memset(str, 0, nmemb * size);
 
-	for (i = 0; i < (nmemb * size); i++)
-		p[i] = 0;
-
-	return (p);
+	return (str);
 }
