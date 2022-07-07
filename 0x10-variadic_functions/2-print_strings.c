@@ -1,11 +1,10 @@
 #include <stdio.h>
-#include "variadic_functions.h"
+#include "variadic_function.h"
 #include <stdarg.h>
 
 /**
  * print_strings - prints strings.
- * @n: number of arguments
- * @separator: character separator of numbers
+ * @n: number of arguments.
  * Return: Always 0.
  */
 void print_strings(const char *separator, const unsigned int n, ...)
@@ -36,6 +35,6 @@ void print_strings(const char *separator, const unsigned int n, ...)
 		}
 		printf("%s", separator);
 	}
-	print("\n");
+	printf("\n");
 	va_end(string);
 }
